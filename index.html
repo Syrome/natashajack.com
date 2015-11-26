@@ -24,7 +24,7 @@
 	<header>
 		<div class="wrapper clearfix">
 			<div class="one_fourth remove_bottom logo">
-				<a href="index.html">
+				<a href="./">
 					<h3>Natasha Jack</h3>
 					<h5>Cinematographer</h5>
 				</a>
@@ -280,7 +280,21 @@
         var BV = new $.BigVideo({useFlashForFirefox:false});
 		BV.init();
 		if ((/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent)) {
-		    BV.show('https://hustleassets.s3.amazonaws.com/reel.mp4');
+    		var bgImages = [
+        	    'img/engrossed2.png',
+        	    'img/shadow-demon3.png',
+        	    'img/engrossed1.png',
+        	    'img/engrossed3.png',
+        	    'img/shadow-demon2.png',
+        	    'img/shadow-demon1.png',
+        	    'img/i1.png',
+        	    'img/i2.png',
+        	    'img/i3.png'
+    		];
+    		
+    		var randomItem = Math.floor(Math.random() * bgImages.length) + 0;
+    		
+		    BV.show(bgImages[randomItem]);
 		} else {
 		    BV.show('https://hustleassets.s3.amazonaws.com/reel.mp4',{
 		    });
